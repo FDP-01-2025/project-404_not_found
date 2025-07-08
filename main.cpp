@@ -42,7 +42,24 @@
             if (!checkCollision(tmp)) p = tmp;
         }
 
-        
+        // Movimiento automático hacia abajo
+        if (++counter > speed) {
+            p.y++; // Mover pieza hacia abajo
+            
+            // Verificar colisión después de mover
+            if (checkCollision(p)) {
+                p.y--; // Revertir movimiento si hay colisión
+                
+                // Fijar la pieza al tablero
+                for (int y = 0; y < 4; y++) {
+                    for (int x = 0; x < 4; x++) {
+                        if (shapes[p.t][p.r][y][x] && p.y + y >= 0) {
+                            board[p.y + y][p.x + x] = p.t + 1;
+                        }
+                    }
+                }
+                
+                
 
     return 0;
 }
