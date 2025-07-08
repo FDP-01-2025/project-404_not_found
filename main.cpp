@@ -24,7 +24,25 @@
     int speed = 20;    // Velocidad de caída (ciclos por movimiento)
     int counter = 0;   // Contador para movimiento automático
 
-    
+    // Bucle principal del juego
+    while (true) {
+        // Manejar entrada del teclado
+        if (_kbhit()) {
+            Piece tmp = p; // Copia temporal para probar movimiento
+            
+            switch (tolower(_getch())) {
+                case 'a': tmp.x--; break; // Mover izquierda
+                case 'd': tmp.x++; break; // Mover derecha
+                case 's': tmp.y++; break; // Mover abajo
+                case 'w': tmp.r = (tmp.r + 1) % 4; break; // Rotar
+                case 'q': return 0; // Salir
+            }
+            
+            // Aplicar movimiento si no hay colisión
+            if (!checkCollision(tmp)) p = tmp;
+        }
+
+        
 
     return 0;
 }
