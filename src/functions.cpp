@@ -113,4 +113,9 @@ bool checkGameOver() {
 
 void draw(const Piece& p) { // 'p' es const aquí, lo cual es correcto para dibujar
     system("cls"); // Limpiar pantalla
+    
+    // Dibujar borde superior
+    cout << "+";
+    for (int x = 0; x < W; x++) cout << "-";
+    cout << "+\n";
 }
