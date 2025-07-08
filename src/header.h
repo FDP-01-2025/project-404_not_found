@@ -14,5 +14,10 @@ struct Piece {
     Piece(int _x = 0, int _y = 0, int _t = 0, int _r = 0) : x(_x), y(_y), t(_t), r(_r) {}
 };
 
+// Prototipos esenciales
+bool checkCollision(const Piece& p);
+bool checkGameOver();
+void draw(const Piece& p);
+void clearLines(Piece& p); 
 
 #endif
