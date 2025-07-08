@@ -71,6 +71,10 @@
                 }
                 
                 
+        // Dibujar estado actual del juego
+        draw(p);
+        Sleep(50); // Pequeña pausa para controlar velocidad
+    }
 
     return 0;
 }
