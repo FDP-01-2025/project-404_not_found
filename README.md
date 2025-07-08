@@ -1,12 +1,44 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/mi1WNrHU)
-# Proyecto de C++ - [Nombre del Juego]
+# Proyecto de C++ - TETRIS
 
 ## Descripción del Proyecto
+---
 
-Breve descripción del juego, su propósito, cómo se juega y cualquier otro detalle importante que describa la idea general del proyecto.
+## 🌌 Temática y ambientación
 
-**Por ejemplo:**
-Este proyecto consiste en un juego de aventuras donde el jugador debe explorar un mundo virtual, recoger objetos, resolver acertijos y enfrentar enemigos. El juego utiliza estructuras de control como `if`, `switch`, y bucles `while` y `for` para generar interacciones dinámicas.
+La temática de este juego se basa en el clásico juego retro muy conocido llamado Tetris,  
+pero nosotros quisimos llevarlo a otro nivel, adaptándolo a una plataforma diferente:  
+la consola de Windows. Aunque conserva la esencia del juego original,  
+le agregamos un enfoque personal que lo hace único.  
+El entorno de texto fue aprovechado al máximo para representar visualmente  
+las piezas, el tablero y los efectos, logrando una experiencia original e inmersiva.
+
+---
+## 🎮 Mecánica principal
+
+* El jugador controla una pieza que cae desde la parte superior.
+* Puede moverla con las teclas:  
+  * `A`: mover a la izquierda  
+  * `D`: mover a la derecha  
+  * `W`: rotar  
+  * `S`: acelerar la caída  
+  * `Q`: salir del juego  
+* Las piezas se fijan al tocar otras piezas o el fondo.
+* Si se forma una línea completa, se elimina.
+* El juego termina cuando los bloques alcanzan la **línea de game over**.
+
+---
+## 🧠 Idea general de la jugabilidad
+
+* El juego incluye 4 tipos de piezas: I, O, T y L
+* Cada una tiene 4 rotaciones posibles
+* Las piezas caen automáticamente con el tiempo
+* El jugador puede rotar y mover las piezas antes de que toquen fondo
+* Al completar una línea, esta desaparece con un efecto visual de parpadeo
+* El jugador debe mantenerse en juego el mayor tiempo posible, acumulando líneas completas sin permitir que las piezas superen la línea límite del tablero.
+
+---
+
 
 ## Equipo
 
