@@ -62,6 +62,15 @@
                 // Verificar y eliminar líneas completas
                 clearLines(p); // 'p' se pasa por referencia no constante
                 
-               
+                // Verificar condición de game over
+                if (checkGameOver()) {
+                    draw(p);
+                    cout << "\nGAME OVER! Bloques alcanzaron la linea limite!\n";
+                    system("pause");
+                    return 0;
+                }
+                
+                
+
     return 0;
 }
