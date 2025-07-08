@@ -118,7 +118,8 @@ void draw(const Piece& p) { // 'p' es const aquí, lo cual es correcto para dibu
     cout << "+";
     for (int x = 0; x < W; x++) cout << "-";
     cout << "+\n";
-for (int y = 0; y < H; y++) {
+// Dibujar cada fila del tablero
+    for (int y = 0; y < H; y++) {
         cout << "|"; // Borde izquierdo
         
         for (int x = 0; x < W; x++) {
@@ -133,87 +134,3 @@ for (int y = 0; y < H; y++) {
                     }
                 }
             }
-            
-            // Dibujar el contenido de la celda
-            if (board[y][x]) {
-                // Bloque fijo (o marcador en línea de game over)
-                cout << (y == GAMEOVER_LINE ? GAMEOVER_MARKER : BLOCK_FIXED);
-            } else {
-                // Espacio vacío o bloque móvil (con marcador en línea de game over)
-                cout << (y == GAMEOVER_LINE ? GAMEOVER_MARKER : 
-                       (isPiece ? BLOCK_MOVING : EMPTY_SPACE));
-            }
-        }
-        cout << "|\n"; // Borde derecho
-    }
-    
-    // Dibujar borde inferior
-    cout << "+";
-    for (int x = 0; x < W; x++) cout << "-";
-    cout << "+\n";
-}
-
-/**
- * FUNCIÓN: clearLines
- * OBJETIVO: Eliminar líneas completas y hacer caer los bloques superiores
- * PARÁMETROS:
- * - p: Pieza actual (para redibujar)
- * FUNCIONAMIENTO:
- * 1. Recorre el tablero de abajo hacia arriba
- * 2. Para cada línea:
- *    a. Verifica si está completa (todos los bloques llenos)
- *    b. Si está completa:
- *       - Efecto visual de parpadeo
- *       - Mueve todas las líneas superiores hacia abajo
- *       - Limpia la línea superior
- *       - Ajusta el índice para revisar la nueva línea en esta posición
- */
-// Cambiado el parámetro de 'const Piece& p' a 'Piece& p' para que draw(p) sea válido
-void clearLines(Piece& p) { 
-    for (int y = H-1; y >= 0; y--) {
-        bool lineComplete = true;
-        
-        // Verificar si la línea está completa
-        for (int x = 0; x < W; x++) {
-            if (board[y][x] == 0) {
-                lineComplete = false;
-                break;
-            }
-        }
-        
-        // Si la línea está completa
-        if (lineComplete) {
-            // Efecto visual: parpadeo (3 veces)
-            for (int flash = 0; flash < 3; flash++) {
-                // Cambiar a valor especial (8) para efecto
-                for (int x = 0; x < W; x++) {
-                    board[y][x] = 8;
-                }
-                draw(p); // 'p' debe ser no-const para llamar a draw si draw no fuera const
-                Sleep(100);
-                
-                // Volver al valor normal (1)
-                for (int x = 0; x < W; x++) {
-                    board[y][x] = 1;
-                }
-                draw(p); // 'p' debe ser no-const para llamar a draw si draw no fuera const
-                Sleep(100);
-            }
-            
-            // Mover todas las líneas superiores hacia abajo
-            for (int yy = y; yy > 0; yy--) {
-                for (int x = 0; x < W; x++) {
-                    board[yy][x] = board[yy-1][x];
-                }
-            }
-            
-            // Limpiar la línea superior
-            for (int x = 0; x < W; x++) {
-                board[0][x] = 0;
-            }
-            
-            // Revisar la misma posición otra vez (ahora con nueva línea)
-            y++;
-        }
-    }
-}
