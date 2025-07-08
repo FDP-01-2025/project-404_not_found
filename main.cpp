@@ -13,6 +13,17 @@
  *    d. Dibuja el estado actual
  */
  int main() {
+    // Configurar consola para caracteres especiales
+    SetConsoleOutputCP(65001);
+    
+    // Inicializar generador aleatorio
+    srand(static_cast<unsigned>(time(nullptr)));
+    
+    // Crear primera pieza (centrada cerca del tope)
+    Piece p(W/2-2, -2, rand()%4, 0);
+    int speed = 20;    // Velocidad de caída (ciclos por movimiento)
+    int counter = 0;   // Contador para movimiento automático
+
     
 
     return 0;
