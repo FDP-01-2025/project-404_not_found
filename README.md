@@ -14,6 +14,31 @@ El entorno de texto fue aprovechado al máximo para representar visualmente
 las piezas, el tablero y los efectos, logrando una experiencia original e inmersiva.
 
 ---
+## 🎮 Mecánica principal
+
+* El jugador controla una pieza que cae desde la parte superior.
+* Puede moverla con las teclas:  
+  * `A`: mover a la izquierda  
+  * `D`: mover a la derecha  
+  * `W`: rotar  
+  * `S`: acelerar la caída  
+  * `Q`: salir del juego  
+* Las piezas se fijan al tocar otras piezas o el fondo.
+* Si se forma una línea completa, se elimina.
+* El juego termina cuando los bloques alcanzan la **línea de game over**.
+
+---
+## 🧠 Idea general de la jugabilidad
+
+* El juego incluye 4 tipos de piezas: I, O, T y L
+* Cada una tiene 4 rotaciones posibles
+* Las piezas caen automáticamente con el tiempo
+* El jugador puede rotar y mover las piezas antes de que toquen fondo
+* Al completar una línea, esta desaparece con un efecto visual de parpadeo
+* El jugador debe mantenerse en juego el mayor tiempo posible, acumulando líneas completas sin permitir que las piezas superen la línea límite del tablero.
+
+---
+
 
 ## Equipo
 
