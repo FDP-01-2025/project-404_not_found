@@ -59,3 +59,20 @@ int shapes[4][4][4][4] = {
     }
 };
 
+/**
+ * FUNCIÓN: checkCollision
+ * OBJETIVO: Verificar si la pieza colisiona con bordes u otros bloques
+ * PARÁMETROS:
+ * - piece: La pieza a verificar
+ * RETORNO:
+ * - true si hay colisión, false si no
+ * FUNCIONAMIENTO:
+ * 1. Recorre la matriz 4x4 de la pieza
+ * 2. Para cada bloque de la pieza:
+ *    a. Calcula su posición en el tablero
+ *    b. Verifica si está fuera de los límites
+ *    c. Verifica si choca con un bloque ya existente
+ */
+bool checkCollision(const Piece& piece) {
+    
+}
