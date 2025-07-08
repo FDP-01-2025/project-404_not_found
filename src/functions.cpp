@@ -134,3 +134,21 @@ void draw(const Piece& p) { // 'p' es const aquí, lo cual es correcto para dibu
                     }
                 }
             }
+            // Dibujar el contenido de la celda
+            if (board[y][x]) {
+                // Bloque fijo (o marcador en línea de game over)
+                cout << (y == GAMEOVER_LINE ? GAMEOVER_MARKER : BLOCK_FIXED);
+            } else {
+                // Espacio vacío o bloque móvil (con marcador en línea de game over)
+                cout << (y == GAMEOVER_LINE ? GAMEOVER_MARKER : 
+                       (isPiece ? BLOCK_MOVING : EMPTY_SPACE));
+            }
+        }
+        cout << "|\n"; // Borde derecho
+    }
+    
+    // Dibujar borde inferior
+    cout << "+";
+    for (int x = 0; x < W; x++) cout << "-";
+    cout << "+\n";
+}
