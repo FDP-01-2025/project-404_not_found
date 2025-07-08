@@ -187,3 +187,13 @@ void clearLines(Piece& p) {
                     board[yy][x] = board[yy-1][x];
                 }
             }
+                // Limpiar la línea superior
+            for (int x = 0; x < W; x++) {
+                board[0][x] = 0;
+            }
+            
+            // Revisar la misma posición otra vez (ahora con nueva línea)
+            y++;
+        }
+    }
+}
