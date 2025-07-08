@@ -93,6 +93,15 @@ bool checkCollision(const Piece& piece) {
     return false;
 }
 
+/**
+ * FUNCIÓN: checkGameOver
+ * OBJETIVO: Verificar si el juego debe terminar
+ * RETORNO:
+ * - true si hay bloques en la línea de game over
+ * FUNCIONAMIENTO:
+ * 1. Recorre la línea de game over (GAMEOVER_LINE)
+ * 2. Si encuentra cualquier bloque fijo, retorna true
+ */
 bool checkGameOver() {
     for (int x = 0; x < W; x++) {
         if (board[GAMEOVER_LINE][x] != 0) {
