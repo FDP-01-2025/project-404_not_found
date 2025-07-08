@@ -74,5 +74,13 @@ int shapes[4][4][4][4] = {
  *    c. Verifica si choca con un bloque ya existente
  */
 bool checkCollision(const Piece& piece) {
-    
+        for (int y = 0; y < 4; y++) {
+        for (int x = 0; x < 4; x++) {
+            if (shapes[piece.t][piece.r][y][x]) {
+                int boardX = piece.x + x;
+                int boardY = piece.y + y;
+
+            }
+        }
+    }
 }
