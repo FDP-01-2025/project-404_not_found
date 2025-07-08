@@ -152,3 +152,14 @@ void draw(const Piece& p) { // 'p' es const aquí, lo cual es correcto para dibu
     for (int x = 0; x < W; x++) cout << "-";
     cout << "+\n";
 }
+void clearLines(Piece& p) { 
+    for (int y = H-1; y >= 0; y--) {
+        bool lineComplete = true;
+        
+        // Verificar si la línea está completa
+        for (int x = 0; x < W; x++) {
+            if (board[y][x] == 0) {
+                lineComplete = false;
+                break;
+            }
+        }
