@@ -80,7 +80,15 @@ bool checkCollision(const Piece& piece) {
                 int boardX = piece.x + x;
                 int boardY = piece.y + y;
 
+                // Verificar límites del tablero
+                if (boardX < 0 || boardX >= W || boardY >= H) 
+                    return true;
+                    
+                // Verificar colisión con bloques existentes (solo si está dentro del tablero)
+                if (boardY >= 0 && board[boardY][boardX])
+                    return true;
             }
         }
     }
+    return false;
 }
