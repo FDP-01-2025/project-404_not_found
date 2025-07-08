@@ -163,3 +163,27 @@ void clearLines(Piece& p) {
                 break;
             }
         }
+         if (lineComplete) {
+            // Efecto visual: parpadeo (3 veces)
+            for (int flash = 0; flash < 3; flash++) {
+                // Cambiar a valor especial (8) para efecto
+                for (int x = 0; x < W; x++) {
+                    board[y][x] = 8;
+                }
+                draw(p); // 'p' debe ser no-const para llamar a draw si draw no fuera const
+                Sleep(100);
+                
+                // Volver al valor normal (1)
+                for (int x = 0; x < W; x++) {
+                    board[y][x] = 1;
+                }
+                draw(p); // 'p' debe ser no-const para llamar a draw si draw no fuera const
+                Sleep(100);
+            }
+            
+            // Mover todas las líneas superiores hacia abajo
+            for (int yy = y; yy > 0; yy--) {
+                for (int x = 0; x < W; x++) {
+                    board[yy][x] = board[yy-1][x];
+                }
+            }
