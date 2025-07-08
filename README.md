@@ -1,12 +1,19 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/mi1WNrHU)
-# Proyecto de C++ - [Nombre del Juego]
+# Proyecto de C++ - TETRIS
 
 ## Descripción del Proyecto
+---
 
-Breve descripción del juego, su propósito, cómo se juega y cualquier otro detalle importante que describa la idea general del proyecto.
+## 🌌 Temática y ambientación
 
-**Por ejemplo:**
-Este proyecto consiste en un juego de aventuras donde el jugador debe explorar un mundo virtual, recoger objetos, resolver acertijos y enfrentar enemigos. El juego utiliza estructuras de control como `if`, `switch`, y bucles `while` y `for` para generar interacciones dinámicas.
+La temática de este juego se basa en el clásico juego retro muy conocido llamado Tetris,  
+pero nosotros quisimos llevarlo a otro nivel, adaptándolo a una plataforma diferente:  
+la consola de Windows. Aunque conserva la esencia del juego original,  
+le agregamos un enfoque personal que lo hace único.  
+El entorno de texto fue aprovechado al máximo para representar visualmente  
+las piezas, el tablero y los efectos, logrando una experiencia original e inmersiva.
+
+---
 
 ## Equipo
 
