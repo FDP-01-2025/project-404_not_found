@@ -183,20 +183,19 @@ switch (tolower(_getch())) {
   * Indicadores visuales de la zona de game over 
 ## Equipo
 
-- **Nombre del equipo:** [Nombre del equipo]
+- **Nombre del equipo:** 404_not_found
 
 ### Integrantes del equipo
 
-1. **Nombre completo:** [Nombre del estudiante 1]  
-   **Carnet:** [Carnet del estudiante 1]
+1. **Nombre completo:** Miguel Leonardo Nuñez Lemus 
+   **Carnet:** 00070822
 
-2. **Nombre completo:** [Nombre del estudiante 2]  
-   **Carnet:** [Carnet del estudiante 2]
+2. **Nombre completo:** Diego Alexander Perez Reyes 
+   **Carnet:** 00049825 
 
-3. **Nombre completo:** [Nombre del estudiante 3]  
-   **Carnet:** [Carnet del estudiante 3]
+3. **Nombre completo:** Diego Gerardo Sánchez Valladares 
+   **Carnet:** 00090725
 
-(Agregar más integrantes si es necesario)
 
 ## Instrucciones de Ejecución
 
