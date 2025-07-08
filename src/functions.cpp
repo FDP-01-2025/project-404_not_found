@@ -110,3 +110,7 @@ bool checkGameOver() {
     }
     return false;
 }
+
+void draw(const Piece& p) { // 'p' es const aquí, lo cual es correcto para dibujar
+    system("cls"); // Limpiar pantalla
+}
