@@ -92,3 +92,12 @@ bool checkCollision(const Piece& piece) {
     }
     return false;
 }
+
+bool checkGameOver() {
+    for (int x = 0; x < W; x++) {
+        if (board[GAMEOVER_LINE][x] != 0) {
+            return true;
+        }
+    }
+    return false;
+}
