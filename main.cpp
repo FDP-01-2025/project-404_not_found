@@ -70,7 +70,20 @@
                     return 0;
                 }
                 
+                // Crear nueva pieza
+                p = Piece(W/2-2, -2, rand()%4, 0);
                 
+                // Verificar si la nueva pieza colisiona (game over)
+                if (checkCollision(p)) {
+                    draw(p);
+                    cout << "\nGAME OVER! No hay espacio para nueva pieza!\n";
+                    system("pause");
+                    return 0;
+                }
+            }
+            counter = 0; // Reiniciar contador
+        }
+
         // Dibujar estado actual del juego
         draw(p);
         Sleep(50); // Pequeña pausa para controlar velocidad
