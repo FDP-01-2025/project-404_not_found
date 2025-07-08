@@ -59,7 +59,9 @@
                     }
                 }
                 
+                // Verificar y eliminar líneas completas
+                clearLines(p); // 'p' se pasa por referencia no constante
                 
-
+               
     return 0;
 }
